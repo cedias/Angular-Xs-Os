@@ -8,3 +8,9 @@
   border: 5px solid black;
 }
 
+.cell:hover{
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
