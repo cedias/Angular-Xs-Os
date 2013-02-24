@@ -11,6 +11,7 @@ function game($scope) {
 		$scope.playing = "X";
 		$scope.board = ["","","","","","","","",""];
 		$scope.winner ="";
+		$scope.won ="";
 		$scope.gameStatus = "playing";
 	};
 
@@ -18,14 +19,17 @@ function game($scope) {
 		if(!$scope.checkEnd()){
 
 			if($scope.board[gridPlay] === ""){
-				
+
 				$scope.board[gridPlay] = $scope.playing;
 
 				if(!$scope.checkEnd()) {
 					$scope.playing = ($scope.playing==="X")?"O":"X";
 				} else
 				{
-					$scope.winner ="The player "+$scope.won+" has won the game";
+					if($scope.won !== "")
+						$scope.winner ="The player "+$scope.won+" has won the game";
+					else
+						$scope.winner ="It's a draw !";
 				}
 		}
 		}

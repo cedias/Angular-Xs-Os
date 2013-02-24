@@ -7,44 +7,47 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
+  <div class="container" ng-app>
 
- <div class="container" ng-app>
-   <h1>Tic Tac Toe</h1>
-  <div ng-controller="game">
-  <h2 class="hero">Playing: {{playing}} - Game Status:  {{gameStatus}}</h2>
-  <table class="gameGrid">
-    <tr>
-        <td class="cell" ng-click="play(0)"> {{board[0]}} </td>
-        <td class="cell" ng-click="play(1)"> {{board[1]}} </td>
-        <td class="cell" ng-click="play(2)"> {{board[2]}} </td>
-    </tr>
+    <div class="page-header">
+      <h1>Tic Tac Toe <small>using Angular.js</small></h1>
+    </div>
 
-    <tr>
-        <td class="cell" ng-click="play(3)"> {{board[3]}} </td>
-        <td class="cell" ng-click="play(4)"> {{board[4]}} </td>
-        <td class="cell" ng-click="play(5)"> {{board[5]}} </td>
-    </tr> 
+    <div ng-controller="game">
+      <h3>Playing: {{playing}}</h3>
+      <table class="gameGrid">
+        <tr>
+            <td class="cell" ng-click="play(0)"> {{board[0]}} </td>
+            <td class="cell" ng-click="play(1)"> {{board[1]}} </td>
+            <td class="cell" ng-click="play(2)"> {{board[2]}} </td>
+        </tr>
 
-    <tr>
-        <td class="cell" ng-click="play(6)"> {{board[6]}} </td>
-        <td class="cell" ng-click="play(7)"> {{board[7]}} </td>
-        <td class="cell" ng-click="play(8)"> {{board[8]}} </td>
-    </tr> 
+        <tr>
+            <td class="cell" ng-click="play(3)"> {{board[3]}} </td>
+            <td class="cell" ng-click="play(4)"> {{board[4]}} </td>
+            <td class="cell" ng-click="play(5)"> {{board[5]}} </td>
+        </tr> 
 
-  </table>
+        <tr>
+            <td class="cell" ng-click="play(6)"> {{board[6]}} </td>
+            <td class="cell" ng-click="play(7)"> {{board[7]}} </td>
+            <td class="cell" ng-click="play(8)"> {{board[8]}} </td>
+        </tr> 
 
-  <h2> {{winner}} </h2>
+      </table>
 
-  <hr/>
-   <button class="btn btn-large btn-primary" type="button" ng-click="restartGame()">Restart</button>
-  </div> 
+      <h2> {{winner}} </h2>
 
-   
- </div>
+      <hr/>
+       <button class="btn btn-large btn-primary" type="button" ng-click="restartGame()">Restart</button>
+      </div> 
+
+       
+  </div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
   -->
-   <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="js/controllers.js"></script>
