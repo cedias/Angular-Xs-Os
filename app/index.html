@@ -1,24 +1,49 @@
 <!doctype html>
-<html lang="en" ng-app="tic-tac-toe">
+<html lang="en" >
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Tic-Tac-Toe</title>
   <link rel="stylesheet" href="css/app.css"/>
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
- 
- <h1>Tic Tac Toe</h1>
- <div>
- </div>
 
+ <div class="container" ng-app>
+   <h1>Tic Tac Toe</h1>
+  <div ng-controller="game">
+  <h2>Playing: {{playing}}</h2>
+  <table class="gameGrid">
+    <tr>
+        <td class="cell" ng-click="play(0)"> {{board[0]}} </td>
+        <td class="cell" ng-click="play(1)"> {{board[1]}} </td>
+        <td class="cell" ng-click="play(2)"> {{board[2]}} </td>
+    </tr>
+
+    <tr>
+        <td class="cell" ng-click="play(3)"> {{board[3]}} </td>
+        <td class="cell" ng-click="play(4)"> {{board[4]}} </td>
+        <td class="cell" ng-click="play(5)"> {{board[5]}} </td>
+    </tr> 
+
+    <tr>
+        <td class="cell" ng-click="play(6)"> {{board[6]}} </td>
+        <td class="cell" ng-click="play(7)"> {{board[7]}} </td>
+        <td class="cell" ng-click="play(8)"> {{board[8]}} </td>
+    </tr> 
+
+  </table>
+  <hr/>
+   <button class="btn btn-large btn-primary" type="button" ng-click="restartGame()">Restart</button>
+  </div> 
+
+   
+ </div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
   -->
+   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
 </body>
 </html>

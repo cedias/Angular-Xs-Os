@@ -3,10 +3,19 @@
 /* Controllers */
 
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+function game($scope) {
+	$scope.playing = "X";
+	$scope.board = ["","","X","","","","","O",""];
 
 
-function MyCtrl2() {
+	$scope.restartGame = function() {
+		$scope.playing = "X";
+		$scope.board = ["","","","","","","","",""];
+	};
+
+	$scope.play = function(gridPlay){
+		$scope.board[gridPlay]=$scope.playing;
+		$scope.playing = ($scope.playing==="X")?"O":"X";
+	};
+
 }
-MyCtrl2.$inject = [];
