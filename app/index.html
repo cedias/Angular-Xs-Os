@@ -11,7 +11,7 @@
  <div class="container" ng-app>
    <h1>Tic Tac Toe</h1>
   <div ng-controller="game">
-  <h2>Playing: {{playing}}</h2>
+  <h2 class="hero">Playing: {{playing}} - Game Status:  {{gameStatus}}</h2>
   <table class="gameGrid">
     <tr>
         <td class="cell" ng-click="play(0)"> {{board[0]}} </td>
@@ -32,6 +32,9 @@
     </tr> 
 
   </table>
+
+  <h2> {{winner}} </h2>
+
   <hr/>
    <button class="btn btn-large btn-primary" type="button" ng-click="restartGame()">Restart</button>
   </div> 
