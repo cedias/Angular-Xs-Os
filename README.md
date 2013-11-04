@@ -4,9 +4,3 @@
 
 I made this small game to try out [Angular.js](http://angularjs.org/) framework. Feel free to browse and reuse it.
 
-
-##TODO
-- IA
-- Tests
-
-
